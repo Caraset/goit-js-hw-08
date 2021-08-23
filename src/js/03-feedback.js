@@ -1,4 +1,3 @@
-'use strict';
 import throttle from 'lodash.throttle';
 
 // const refs = {
@@ -11,7 +10,7 @@ const form = document.querySelector('.feedback-form');
 
 let localValue = {};
 
-if (localStorage.key(FORM_STATE_KEY)) {
+if (localStorage.key(FORM_STATE_KEY) !== null) {
   localValue = JSON.parse(localStorage.getItem(FORM_STATE_KEY));
 
   for (let f in localValue) {
