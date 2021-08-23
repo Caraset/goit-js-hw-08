@@ -1,3 +1,4 @@
+'use strict';
 import throttle from 'lodash.throttle';
 
 // const refs = {
