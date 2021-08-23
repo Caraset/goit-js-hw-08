@@ -24,11 +24,9 @@ function onFormInput(e) {
   // e.preventDefault();
   const formData = new FormData(form);
 
-  const f = {};
+  formData.forEach((a, b) => (localValue[b] = a));
 
-  formData.forEach((a, b) => (f[b] = a));
-
-  localStorage.setItem(FORM_STATE_KEY, JSON.stringify(f));
+  localStorage.setItem(FORM_STATE_KEY, JSON.stringify(localValue));
 }
 
 form.addEventListener('submit', onFormSubmit);
